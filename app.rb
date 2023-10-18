@@ -19,21 +19,21 @@ A tour de rôle, vous choisissez où vous voulez placer votre symbole comme suit
 ----------------
 
 Maintenant, annoncez votre nom et votre symbole :"
-        print "Nom du premier joueur : "
-        player1_name = gets.chomp
-        print "Symbole du premier joueur : "
-        player1_sign = gets.chomp
-        puts ""
-        print "Nom du deuxième joueur : "
-        player2_name = gets.chomp
-        print "Symbole du deuxième joueur : "
-        player2_sign = gets.chomp
+print "Nom du premier joueur : "
+player1_name = gets.chomp
+print "Symbole du premier joueur : "
+player1_sign = gets.chomp
+puts ""
+print "Nom du deuxième joueur : "
+player2_name = gets.chomp
+print "Symbole du deuxième joueur : "
+player2_sign = gets.chomp
 
-        
-        player1 = Player.new(player1_name, player1_sign)
-        player2 = Player.new(player2_name, player2_sign)
+player1 = Player.new(player1_name, player1_sign)
+player2 = Player.new(player2_name, player2_sign)
 
-while 1 == 1
+new_game = "y"
+while new_game == "y" || new_game == "Y"
     game = Game.new()
     while !game.is_over?
         game.play(player1)
@@ -47,7 +47,6 @@ while 1 == 1
     puts ""
     print "Nouvelle partie ? (y/n) "
     new_game = gets.chomp
-    break if new_game != "y" && new_game != "Y"
 end
 
 puts ""
